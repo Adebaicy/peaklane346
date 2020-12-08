@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Peaklane schools {% endblock %}
+{% block changestyle %}
+
+
+#seri, h4{
+
+font-size:60px;
+
+}
+
+.freeme{
+margin-top:50px;
+margin-bottom:50px;
+}
+{% endblock %}
+{% block content %} 
+<div class="container freeme">
+<h4 align="center" >Welcome to our website </h4>
+<!--<p id = "a"> <img width="40" height="30" src="{% static 'Tulips.jpg' %}">-->
+
+<p onload="fvk()">Peaklane private schools was founded in 1999 by a seasoned and qualified educationist
+in her quest to bring up children with enviable character and excellent academic performance.</p>
+
+<div id="more" onclick="toggle()"> Click here for more </div>
+
+</div>
+
+<div class="container">
+    <div class="row">
+    <h2 id="seri" class="col-sm" align="center">Our standing values</h2></div></div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+    <h3>Well Defined Environment</h3>
+       Our environment is specially designed to stimulate physical,
+intellectual and moral growth of our pupils and students. We have decent, well ventilated classrooms with immaculately
+ cleaned washrooms and beautiful lawns.
+    </div>
+    <div class="col-sm">
+    <h3>Top Health-Care</h3>
+      In peaklane schools, the health and well being of our pupils are taken quite seriously. To this effect, we have 
+ provided an in-house recovery room to take care of minor ailments that may occur within the period is in session.
+
+    </div>
+    <div class="col-sm">
+    <h3>Explicit School Curriculum</h3>
+      In accordance with the federal government's policy on national education, the school provides a wide variety of subjects
+geared towards the holistic development of our pupils
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+ function  fvk(){
+
+alert("Set your browser to a desktop view for a better view.");
+
+}
+</script>
+{% endblock %}

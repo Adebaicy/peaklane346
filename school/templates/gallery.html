@@ -1,0 +1,177 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Gallery {% endblock %}
+
+{% block changestyle %}
+.ii{
+
+background-color:#3282B8;
+width:900px;
+
+margin-left:auto;
+margin-right:auto;
+
+}
+
+
+#finw{
+display:block;
+
+width:800px;
+height:350px;
+margin-left:auto;
+margin-right:auto;
+margin-top:20px;
+margin-bottom:50px;
+
+}
+
+
+
+ {% endblock %}
+
+
+{% block content %}
+<br>
+<br>
+<h3 align="center">Events Gallery</h3>
+<br>
+<br>
+<style type="text/css" >
+
+
+#wale{
+
+float:left;
+margin-left:150px;
+
+
+}
+#wale1{float:right;margin-right:150px;}
+.cm{display:block;}
+
+#back{
+position:relative;
+top:100px;
+left:-400px;}
+
+#front{position:relative;
+top:100px;
+left:750px;}
+
+#feel{
+position:relative;
+top:-150px;
+left:530px;
+font-size:18px;
+width:300px;
+height:300px;
+}
+.grab{
+margin-left:30px;
+margin-right:30px;
+border: 5px solid #BBE1FA;
+height:400px;}
+</style>
+
+<div align="center" class="ii">
+<img width="
+    
+    500" id = "finw" class="ii" src="{% static 'images/pk1.jpg' %}">
+</div>
+
+
+    
+    <div class="container">
+    <div class="row">
+    <h2  class="col-sm" align="center"></h2></div></div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+    <h3><br></h3>
+       <img onclick = "showme()" style="opacity:0.4;" id="walex" width="300" src="{% static 'images/pk1.jpg' %}">
+    </div>
+    <div class="col-sm">
+    <h3><br></h3>
+      Feel comfortable in our gallery as you consider the <b>LANE</b> you need to give your child a <b>PEAK</b> in his/her career.
+
+    </div>
+    <div class="col-sm">
+    <h3><br></h3>
+      <img onclick="upme()" style="opacity:0.4;" id="walex1" width="300" src="{% static 'images/pk2.jpg' %}">
+    </div>
+  </div>
+</div>
+
+
+        <div class="container">
+    <div class="row">
+    <h2  class="col-sm" align="center">
+     <svg id="bacxk" onclick="bb()" width="60px" height="30px" viewBox="0 0 16 16" class="bi bi-caret-left-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path  d="M3.86 8.753l5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+</svg>
+     
+      <svg id="fronxt" onclick="ff()" width="60px" height="30px" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+</svg>
+    </h2></div></div>
+    
+   <script  type="text/javascript">
+   
+   
+
+var imges=[ "/static/images/pk1.jpg", "/static/images/pk2.jpg",
+"/static/images/pk3.jpg", "/static/images/pk4.jpg", "/static/images/pk5.jpg",
+"/static/images/pk6.jpg","/static/images/pk7.jpg",
+"/static/images/pk8.jpg"];
+
+var demc=2;
+function ff(){
+    if (demc<imges.length){
+       
+document.getElementById("walex").src=imges[demc];
+document.getElementById("walex1").src=imges[demc+1];
+ demc=demc+2;
+
+if (demc==imges.length-2){
+demc=0
+}
+
+
+
+    }
+
+
+
+}
+
+
+function bb(){
+
+
+
+    if (demc==0){
+        demc=imges.length-2;
+    }
+    else
+    
+    {
+        demc=demc-2;
+document.getElementById("walex").src=imges[demc];
+document.getElementById("walex1").src=imges[demc+1];
+
+    }
+     
+
+}
+
+
+
+   
+   
+   </script>
+
+
+<br><br><br><br><br><br><br><br><br>
+{% endblock %}

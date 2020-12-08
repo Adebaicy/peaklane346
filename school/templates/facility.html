@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Facility {% endblock %}
+
+
+{% block content %}
+<style type="text/css">
+
+#blk{
+float:left;
+margin-left:90px;
+height:300px;
+top:-30px;
+}
+
+.dr{
+padding-left:50px;
+padding-bottom:50px;
+padding-top:50px;
+font-size:20px;
+
+
+}
+#i1mag{
+float:left;
+margin-left:150px;
+border-radius:35px;
+}
+
+
+@media only screen and (min-width:1001px){
+
+
+.fem{
+
+margin-top:500px;
+
+}
+}
+
+@media only screen and (max-width:1000px){
+
+#bl{
+margin-top:500px;
+
+
+
+#1mag{
+
+
+
+}
+
+.fem{
+
+margin-top:300px;
+
+}
+}
+</style><br><br>
+<h3 align="center" onload="change()">our facilities </h3>
+<br><br>
+<div id="blk"><ul class="dr">
+<li>Tastefully furnished classrooms</li>
+<li>Spacious playground</li>
+<li>Modern laboratories  fitted with state-of-the-art equipment</li>
+<li>Air-conditioned  information technology rooms</li>
+<li>Up-to-date audio-visual teaching aids</li>
+<li>Boarding house</li>
+<li>Well-equipped recovery rooms</li>
+</ul>
+</div>
+
+
+
+<div class="fa1de"  id="bl">
+    <img id="i1mag" height="300" width="500" src="{% static 'images/facility9.jpg' %}" ></div><br><br><br><br><br><br><br><br><br><br><br>
+     </div>   
+        
+
+<script type="text/javascript">
+
+
+
+var m=0;
+var time=5000;
+var mages=[ "/static/images/facility1.jpg", "/static/images/facility5.jpg",
+"/static/images/facility3.jpg", "/static/images/facility4.jpg",
+"/static/images/facility7.jpg","/static/images/facility8.jpg"
+,"/static/images/facility9.jpg", "/static/images/facility10.jpg"
+];
+
+function change(){
+
+
+    if(true){
+        document.getElementById("i1mag").src=mages[m];
+          document.getElementById("i1mag").animate([
+    
+    {opacity:0.5},
+    
+    {opacity:1}
+    ],
+    {
+    duration:2000,
+   });
+   
+m++;
+
+    if(m==mages.length) 
+    
+    {
+    m=0;
+    }
+
+    }
+
+
+
+
+
+}
+ 
+
+setInterval(change, time);
+
+
+
+
+</script>
+{% endblock %}

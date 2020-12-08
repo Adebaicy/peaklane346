@@ -1,0 +1,30 @@
+{% extends 'baseit.html' %}
+{% load static %}
+{% block title %} {{ details.title }} {% endblock %}
+
+{% block changestyle %} 
+.mc{
+background-color:#79a3b1;
+
+}
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="container">
+<div class="col-md-12">
+    <h2> {{details.title}} </h2>
+    <p>{{details.body}}</p>
+    <div>
+    
+        <span class="badge mc badge-success">Posted on {{details.created_on}} </span>
+        
+    </div> 
+      
+    <hr>
+</div>
+
+
+{% endblock %}

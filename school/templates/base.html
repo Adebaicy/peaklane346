@@ -1,0 +1,331 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+<link rel="stylesheet" href="{% static 'css/cat.css' %}">
+
+
+
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+
+<title>{% block title %} {% endblock %}</title>
+
+<style type="text/css">
+
+*{
+font-family: Comic Sana MS, cursive;
+
+}
+img.nxt {
+float: left;
+margin-right:10px;
+}
+
+#tulip{
+
+border-radius:10%;
+
+}
+.ii{
+display:block;
+}
+
+#nxt{
+animation-name: fade;
+animation-duration: 5s;
+}
+
+@keyframes fade{
+from{opacity: 0.4;}
+to{opacity:1;}
+}
+.our {
+display: block;
+vertical-align:top;
+background-color: #132743;
+}
+
+
+.fem{
+margin-top:120px;
+background-color:#000000;
+color:white;
+padding-bottom:20px;}
+
+.navbar-nav > li{
+  padding-left:30px;
+  padding-right:30px;
+}
+
+#more {
+color:red;}
+
+
+#nnn{
+width:700px;
+margin-left:auto;
+margin-right:auto;
+height:350px;
+background-color:blue;
+margin-top:20px;
+
+display:flex;
+justif-content:center;
+align-items:center;
+}
+
+#nxt
+{
+position:relative;
+left:150px;
+}
+
+
+.pre1v{
+position:relative;
+left:-300px;
+font-size:30px;
+color:white;}
+
+#wale1, #wale{
+
+opacity:0.4;
+
+}
+.fuck{
+height:380px;
+
+}
+/*
+.controlit{
+width:500px;
+margin-right:300px;
+}*/
+#fvn{
+
+background-color:#51adcf;
+
+}
+.nex1t{
+position:relative;
+left:175px;
+color:white;
+font-size:30px;}
+
+.mena{
+margin:15px;
+}
+
+#fo{
+font-size:30px;
+
+}
+
+.whitsle{
+margin-top:20px;
+}
+
+#jk{
+font-size:30px;}
+</style>
+<!--
+<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>-->
+
+<script src="{% static "js/chang.js" %}" type="text/javascript">
+</script>
+<link rel="shortcut icon" href="#">
+
+<style>{% block changestyle %} {% endblock %}</style>
+
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,800,900%7cRaleway:300,400,500,600,700" rel="stylesheet">
+</head>
+<body  >
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" id="jk" href = "{% url "home" %}">Peaklane Private Schools</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+     <div class="navbar-nav">
+      <a  class="nav-link active" href = "{% url "home" %}">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-link" href = "{% url "about" %}">About</a>
+      <a class="nav-link" href = "{% url "curriculum" %}">Curriculum</a>
+      <a class="nav-link" href = "{% url "facility" %}">Facilities</a>
+      <a class="nav-link" href = "{% url "admission" %}">Admission</a>
+      <a class="nav-link" href = "{% url "gallery" %}">Gallery</a>
+      <a class="nav-link" href = "{% url "contact" %}">Contact Us</a>
+      <a class="nav-link" href = "{% url "blog:hhome" %}">Latest News</a>
+      
+    </div>  
+  </div>
+</nav>
+
+
+  
+<div id="fvn" > <div class="mena">Learning anchored on a sure foundation</div></div>
+
+<div class="our" >
+<div id="nnn" ><img class="f1de" id= "nxt" width="400" height="200" src="{% static 'images/peak1.jpg' %}">
+
+<a class="pre1v" onclick="prev()">&#10094;</a>
+    <a class="nex1t" onclick="nex1t()">&#10095;</a> 
+    
+    
+    
+    </div> 
+
+
+
+
+</div>
+
+
+
+{% block content %} {% endblock %}
+<div class="container fem">
+<h2 id="seri" align="center">Our Schools</h2>
+ <div class="row whistle">
+    <div align="center" class="col-sm">
+    Nursery
+    </div>
+    
+    <div align="center" class="col-sm">
+    Primary
+    </div>
+    
+    
+    <div align="center" class="col-sm">
+    Secondary
+    </div>
+
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+
+
+
+var i=0;
+var imaes=[ "static/images/peak2.jpg", "/static/images/peak3.jpg","/static/images/peak4.jpg"];
+//"/static/images/Hydrangeas.jpg"];
+//var images=["Desert.jpg"]
+
+
+
+
+
+
+
+
+function nex1t(){
+    
+
+if(i<imaes.length){
+    document.getElementById("nxt").src=imaes[i];
+    document.getElementById("nxt").animate([
+    
+    {opacity:0.4},
+    
+    {opacity:1}
+    ],
+    {
+    duration:2000,
+    easing:"ease-out"});
+i++;
+if(i==imaes.length){
+    i=0;
+}
+
+}
+
+}
+
+function prev(){
+    if (i>-1){
+        
+        
+        if (i==0){
+            i=imaes.length-1;
+            document.getElementById("nxt").src=imaes[i];
+              document.getElementById("nxt").animate([
+    
+    {opacity:0.4},
+    
+    {opacity:1}
+    ],
+    {
+    duration:2000,
+    easing:"ease-out"});
+    }
+        else
+        {
+            i--;
+            
+            document.getElementById("nxt").src=imaes[i];
+              document.getElementById("nxt").animate([
+    
+    {opacity:0.4},
+    
+    {opacity:1}
+    ],
+    {
+    duration:2000,
+    easing:"ease-out"});
+
+
+        }
+  
+    }
+
+
+}
+
+
+
+
+
+function toggle(){
+
+var name='The school is poised to provide dynamic academic training environment, adequate teaching equipment, in addition to '+
+        "competent and committed staff who are ready to carefully train and shape our future leaders "+
+        'to the peak of their intellectual and spiritual glory.';
+
+    document.getElementById("more").innerHTML=name;
+    document.getElementById("more").style.color="black"; 
+
+}
+
+
+
+ function  fvk(){
+
+alert("Set your browser to a desktop view for a better view.");
+
+}
+
+
+</script>
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+</body>
+</html>
